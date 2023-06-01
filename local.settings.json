@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "PLANTESCALE_HOST": "",
+    "PLANETSCALE_USERNAME": "",
+    "PLANETSCALE_PASSWORD": "",
+    "REDIS_URL": "",
+    "REDIS_TOKEN": ""
+  }
+}
