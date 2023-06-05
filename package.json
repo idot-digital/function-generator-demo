@@ -11,7 +11,8 @@
     "build": "npm run build:schemas && npm run build:functions && npm run build:ts",
     "build:ts": "ts-node-esm node_modules/@idot-digital/function-generator/scripts/rm.ts && tsc",
     "build:schemas": "ts-node-esm node_modules/@idot-digital/function-generator/scripts/schemas-to-interfaces.ts",
-    "build:functions": "ts-node-esm node_modules/@idot-digital/function-generator/scripts/generate-functions.ts"
+    "build:functions": "ts-node-esm node_modules/@idot-digital/function-generator/scripts/generate-functions.ts",
+    "migrate:db": "ts-node-esm src/migrateDatabases.ts"
   },
   "author": "",
   "license": "UNLICENSED",
