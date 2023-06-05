@@ -7,7 +7,7 @@
   "module": "dist/generated/client/index.js",
   "scripts": {
     "start": "npm run build && func host start",
-    "deploy": "npm run build && func azure functionapp publish {{function_app_name}}",
+    "deploy": "npm run build && func azure functionapp publish {{function_app_name}} --publish-local-settings",
     "build": "npm run build:schemas && npm run build:functions && npm run build:ts",
     "build:ts": "ts-node-esm node_modules/@idot-digital/function-generator/scripts/rm.ts && tsc",
     "build:schemas": "ts-node-esm node_modules/@idot-digital/function-generator/scripts/schemas-to-interfaces.ts",
