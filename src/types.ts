@@ -1,6 +1,7 @@
+import { Connection } from "@planetscale/database";
 import { UserData } from "./generated/interfaces/index.js";
-import { FunctionResponse, FunctionResults } from "./resultTypes";
-
+import { FunctionResponse, FunctionResults } from "./resultTypes.js";
+import { Redis } from "@upstash/redis";
 export { HttpMethod } from "@azure/functions";
 
 export type FunctionRequest = {};
@@ -28,3 +29,13 @@ export enum AuthLevel {
    */
   admin = "admin",
 }
+
+export type ServiceType = "planetscale" | "redis"; // | "idot";
+
+export type Services<T extends ServiceType[]> = {
+  [K in T[number]]: K extends "planetscale"
+    ? Connection
+    : K extends "redis"
+    ? Redis
+    : never;
+};
