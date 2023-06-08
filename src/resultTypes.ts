@@ -4,7 +4,7 @@ export type DefaultFunctionResults = {
 };
 
 export type FunctionResults = {
-  [key: number]: object | string;
+  [key: number]: object | null | string | number | boolean;
 };
 export type FunctionResponse<RES extends FunctionResults> = {
   [R in keyof RES]: { status: R; body: RES[R] };
