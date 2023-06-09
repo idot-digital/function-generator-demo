@@ -1,5 +1,6 @@
 export type DefaultFunctionResults = {
   400: string; // default on request schema error
+  401: string; // default on unauthorized
   500: string; // default on server error
 };
 
